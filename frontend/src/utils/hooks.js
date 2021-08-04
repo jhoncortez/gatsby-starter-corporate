@@ -1,4 +1,5 @@
 import {  useEffect } from "react";
+import LocomotiveScroll from 'locomotive-scroll';
 
 // Got from https://usehooks.com/useLockBodyScroll/
 export function useLockBodyScroll() {
@@ -34,3 +35,10 @@ export function useOnClickOutside(ref, handler) {
     }
   }, [ref, handler])
 }
+
+export const initScroll = () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+  });
+} 

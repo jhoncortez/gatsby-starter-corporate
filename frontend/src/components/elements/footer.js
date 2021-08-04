@@ -2,7 +2,9 @@ import React from "react"
 import Image from "../image"
 import PropTypes from "prop-types"
 import { linkPropTypes, mediaPropTypes } from "@/utils/types"
+import { initScroll } from "@/utils/hooks"
 import CustomLink from "./custom-link"
+
 
 const Footer = ({ footer }) => {
   return (
@@ -39,6 +41,9 @@ const Footer = ({ footer }) => {
       <div className="text-sm bg-gray-200 py-6 text-gray-700">
         <div className="container">{footer.smallText}</div>
       </div>
+      <>
+        {{initScroll}}
+      </>
     </footer>
   )
 }
